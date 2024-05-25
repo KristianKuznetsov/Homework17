@@ -53,7 +53,7 @@ public class TaskBuilder {
     //Используя Predicate среди массива чисел вывести только те, которые являются положительными.
 
     public static void build2() {
-        ArrayList<Integer> arrayList = getRandomIntegerArrayList(TASK_2_ARRAY_SIZE);
+        ArrayList<Integer> arrayList = getRandomIntegerArrayList();
         ArrayList<Integer> resultList = new ArrayList<>();
 
         Predicate<Integer> isPositive = x -> x > TASK_2_BORDER;
@@ -117,10 +117,10 @@ public class TaskBuilder {
     }
 
 
-    private static ArrayList<Integer> getRandomIntegerArrayList(int size) {
+    private static ArrayList<Integer> getRandomIntegerArrayList() {
         Random random = new Random();
         ArrayList<Integer> arrayList = new ArrayList<>();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < TASK_2_ARRAY_SIZE; i++) {
             arrayList.add(random.nextInt(TASK_2_UPPER_BORDER) + TASK_2_LOWER_BORDER);
         }
         return arrayList;
